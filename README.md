@@ -1,0 +1,1 @@
+# interactive-rate-component
