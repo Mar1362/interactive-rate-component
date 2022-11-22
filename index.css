@@ -1,0 +1,126 @@
+:root{
+    --color-orange: hsl(25, 97%, 53%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-light-grey: hsl(217, 12%, 63%);
+    --color-medium-grey: hsl(216, 12%, 54%);
+    --color-dark-blue: hsl(213, 19%, 18%);
+    --color-more-dark-blue: rgba(31,38,48,255);
+    --color-very-dark-blue: hsl(216, 12%, 8%);
+    --family-overpass: 'Overpass';
+    font-size: 15px;
+}
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body, main{
+    background-color: var(--color-very-dark-blue);
+    width: 100vw;
+    min-height: 100vh;
+}
+main{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+section{
+    background-color: var(--color-more-dark-blue);
+    max-width: 327px;
+    padding: 4% 4%;
+    border-radius: 20px;
+    padding-bottom: 8%;
+}
+section figure{
+    background-color: var(--color-dark-blue);
+    width: 13%;
+    padding: 3%;
+    text-align: center;
+    border-radius: 50%;
+    margin-top: 3%;
+    margin-left: 3%;
+}
+section h1{
+    color: var(--color-white);
+    font-family: var(--family-overpass), auto;
+    margin-top: 7%;
+    margin-left: 3%;
+    font-size: x-large;
+    font-weight: 700;
+}
+section p{
+    color: var(--color-light-grey);
+    font-family: var(--family-overpass), auto;
+    margin-top: 4%;
+    margin-left: 3%;
+    line-height: 1.4rem;
+    text-align: left;
+    font-size: .9rem;
+}
+section ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10%;
+    margin-left: 3%;
+    gap: 5%;
+}
+section ul li{
+    text-align: center;
+    color: var(--color-light-grey);
+    font-family: var(--family-overpass), auto;
+    font-weight: 400;
+    font-size: 1rem;
+    background-color: var(--color-dark-blue);
+    width: 14%;
+    padding: 4% 0;
+    border-radius: 50%;
+    transition: all .5s;
+}
+section ul li:hover:not(.clicked){
+    background-color: var(--color-light-grey);
+    color: var(--color-white);
+    cursor: pointer;
+    font-weight: 700;
+}
+.clicked{
+    /* 
+       this class style is for selected rate and it
+       is affected by the javascript on click
+    */
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+section button{
+    width: 95%;
+    padding: 4.5%;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    font-family: var(--family-overpass), auto;
+    font-weight: 400;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-left: 3%;
+    margin-top: 8%;
+    transition: all .5s;
+}
+section button:hover{
+    background-color: var(--color-white);
+    color: var(--color-orange);
+    cursor: pointer;
+    font-weight: 700;
+}
+
+@media only screen and (min-width: 700px){
+    section{
+        padding: 1%;
+    }
+}
